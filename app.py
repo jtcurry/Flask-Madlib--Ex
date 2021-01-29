@@ -4,14 +4,14 @@ app = Flask(__name__)
 
 
 @app.route("/")
-"""Take user to page for selecting template"""
 def render_home():
+    """Take user to page for selecting template"""
     return render_template("home.html", stories=stories.values())
 
 
 @app.route("/form")
-"""Show user a form for picking words based off selected template"""
 def render_form():
+    """Show user a form for picking words based off selected template"""
     story_title = request.args["story_title"]
     story = stories[story_title]
     prompts = story.prompts
@@ -19,8 +19,8 @@ def render_form():
 
 
 @app.route("/story")
-"""Display story with user's words"""
 def render_story():
+    """Display story with user's words"""
     story_title = request.args["story_title"]
     story = stories[story_title]
     text = story.generate(request.args)
