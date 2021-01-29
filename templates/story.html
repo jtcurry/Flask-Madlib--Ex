@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block title %}Your Story{% endblock %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Story</title>
-</head>
+{% block content %}
+<h1>Your Story</h1>
 
-<body>
-  <h1>Your Story</h1>
-  <p>{{text}}</p>
-</body>
-
-</html>
+<p>{{text}}</p>
+{% endblock %}
