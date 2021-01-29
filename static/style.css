@@ -1,7 +1,31 @@
 body {
-  background-color: green;
+  background-color: rgb(44, 44, 44);
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: larger;
 }
 
 h1 {
-  color: yellow;
+  color: gold;
+}
+
+h2 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+button {
+  background-color: gold;
+  color: rgb(44, 44, 44);
+  border-radius: 10px;
+  padding: auto 1rem;
+  font-weight: 900;
+}
+
+button:hover {
+  background-color: rgba(255, 217, 0, 0.671);
+  cursor: pointer;
 }

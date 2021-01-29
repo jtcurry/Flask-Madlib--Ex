@@ -6,7 +6,7 @@
 
 <form action="/story">
   {% for prompt in prompts %}
-  <p>{{prompt}}: <input type="text" name="{{prompt}}"></p>
+  <p>{{prompt}}: <input type="text" name="{{prompt}}" required></p>
   {% endfor %}
   <input type="hidden" name="story_title" value="{{story_title}}">
   <button type="submit">Submit</button>
