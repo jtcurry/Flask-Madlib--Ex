@@ -2,12 +2,14 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>Madlibs</h1>
-
-<form action="/story">
-  {% for prompt in prompts %}
-  <p>{{prompt}}: <input type="text" name="{{prompt}}"></p>
-  {% endfor %}
-  <button type="submit">Submit</button>
+<h1>Welcome to Madlibs</h1>
+<h2>Please Select a Template</h2>
+<form action="/form">
+  <select name="story_title" id="storytitle">
+    {% for story in stories %}
+    <option value="{{story.title}}">{{story.title}}</option>
+    {% endfor %}
+  </select>
+  <button type="submit">Go</button>
 </form>
 {% endblock %}
